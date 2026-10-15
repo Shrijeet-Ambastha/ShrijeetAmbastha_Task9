@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Services Landing Page</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 24px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #555555;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #1a9cff;
+    }
+
+    .btn-user {
+      background-color: #eaf5ff;
+      color: #1a9cff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 0 80px 0;
+      gap: 40px;
+      min-height: calc(100vh - 120px);
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 540px;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      color: #1a9cff;
+    }
+
+    .hero-description {
+      font-size: 16px;
+      color: #8a9ba8;
+      margin-bottom: 35px;
+      max-width: 480px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #1a9cff;
+      color: #ffffff;
+      padding: 14px 32px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(26, 156, 255, 0.25);
+      border: none;
+      cursor: pointer;
+      
+      /* Smooth animation transition */
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+
+    /* Hover rule updated with scale and rotate */
+    .btn-primary:hover {
+      background-color: #0b8bf0;
+      transform: scale(1.05) rotate(-2deg);
+      box-shadow: 0 14px 28px rgba(26, 156, 255, 0.4);
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.4s ease-out;
+    }
+
+    .hero-image img:hover {
+      animation: circularOrbit 3s linear infinite;
+    }
+
+    @keyframes circularOrbit {
+      0% {
+        transform: translate(0px, -24px);
+      }
+      12.5% {
+        transform: translate(17px, -17px);
+      }
+      25% {
+        transform: translate(24px, 0px);
+      }
+      37.5% {
+        transform: translate(17px, 17px);
+      }
+      50% {
+        transform: translate(0px, 24px);
+      }
+      62.5% {
+        transform: translate(-17px, 17px);
+      }
+      75% {
+        transform: translate(-24px, 0px);
+      }
+      87.5% {
+        transform: translate(-17px, -17px);
+      }
+      100% {
+        transform: translate(0px, -24px);
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .hero {
+        padding: 40px 0;
+        gap: 20px;
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      .hero-image img {
+        max-width: 360px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        padding: 16px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-around;
+        padding-top: 10px;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .hero {
+        flex-direction: column-reverse; 
+        text-align: center;
+        padding: 20px 0 50px 0;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-title {
+        font-size: 28px;
+        margin-top: 10px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        margin: 0 auto 28px auto;
+      }
+
+      .btn-primary {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .hero-image img {
+        max-width: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Logo</a>
+        
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <button class="btn-user">Username</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Revitalize Your Clothes with Expert <span>Laundry Services!</span>
+        </h1>
+        <p class="hero-description">
+          From premium dry cleaning to swift wash and fold, we deliver care and convenience. 
+          Schedule a pickup and rediscover the freshness of your clothes today!
+        </p>
+        <a href="#" class="btn-primary">Book a service today!</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://imgs.search.brave.com/EBjGWs1l5H0EEj6vGemZBJqr_flzx1s2blDtdyUnmKQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8x/Mi8wNy8wOS80Ni93/YXNoaW5nLW1hY2hp/bmUtMTg4OTA4N182/NDAuanBn" alt="Laundry Illustration" />
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
